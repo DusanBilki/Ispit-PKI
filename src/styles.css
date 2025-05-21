@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+html, body { height: 100%; background-color: gray;}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 p {
     color: white !important;
@@ -9,3 +9,13 @@ p {
 mat-card-title{
     color: white;
 }
+
+.moviePhoto {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+
+}
+.movie {
+    color: white;
+  }
