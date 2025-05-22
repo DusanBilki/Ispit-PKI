@@ -12,10 +12,24 @@ mat-card-title{
 
 .moviePhoto {
     width: 100%;
-    height: 300px;
+    height: 200px;
     object-fit: contain;
 
 }
 .movie {
     color: white;
   }
+
+  .containers {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .example-card {
+    max-width: 400px;
+}
+
+.example-header-image {
+    background-size: cover;
+}

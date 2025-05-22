@@ -2,18 +2,36 @@
     {
         "id": 1,
         "naziv": "Hair",
-        "opis": "Movie Hair with iconic music",
+        "opis": "Claude Bukowski leaves the family ranch in Oklahoma for New York where he is rapidly embraced into the hippie group of youngsters led by Berger, yet he's already been drafted. He soon falls in love with Sheila Franklin, a rich girl but still a rebel inside.",
         "zanr": "War",
         "trajanje": 121,
         "reziser": "Milos Forman",
         "glumci": ["Treat Williams", "Donnie Dacus"],
         "datumIzlaska": 1979,
         "projekcija": [
-            {"datum": "2025-05-10T19:00:00Z", "status":""}
+            {"datum": "2025-05-10T19:00:00Z","cena":800 , "status":""}
         ],
         "recenzije":[
-            {"Korisnik_1": "Korisnik 1", "ocena": 5,"komentar": "dirljiv film"}
+            {"user": "Korisnik 1", "ocena": 5,"komentar": "dirljiv film"}
         ],
         "slika": "/assets/img/hair.jpg"
+    },
+
+    {
+        "id": 2,
+        "naziv": "Godfather",
+        "opis": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+        "zanr": "Thriller/Drama",
+        "trajanje": 175,
+        "reziser": "Francis Ford Copola",
+        "glumci": ["Marlon Brando", "Al Pachino", "James Caan"],
+        "datumIzlaska": 1972,
+        "projekcija": [
+            {"datum": "2025-05-12T21:00:00Z", "cena": 1000, "status":""}
+        ],
+        "recenzije":[
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"}
+        ],
+        "slika": "/assets/img/godfather.jpg"
     }
 ]

@@ -37,4 +37,20 @@ export class MovieService {
       }
     }).pipe(map(movies => movies.find(movie => movie.id === id)))
   }
+
+  public getMovieByName(name: string){
+    return this.client.get<MovieModel[]>(this.url,{
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).pipe(map(movies => movies.find(movie => movie.naziv === name)))
+  }
+
+public getMovieByZanr(zanr: string){
+  return this.client.get<MovieModel[]>(this.url, {
+      headers: {
+        'Accept' : 'application/json'
+      }
+    }).pipe(map(movie => movie.filter(movies => movies.zanr === zanr)))
+}
 }

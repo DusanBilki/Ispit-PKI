@@ -1,3 +1,5 @@
+import { MovieProjection } from "./movieProjection.model";
+import { MovieReview } from "./movieReview";
 
 
 export interface MovieModel {
@@ -9,8 +11,8 @@ export interface MovieModel {
     reziser: string,
     glumci: string[],
     datumIzlaska: number,
-    projekcija: [],
-    recenzije: [],
+    projekcija: MovieProjection[],
+    recenzije: MovieReview[],
     slika: string
 }
 
