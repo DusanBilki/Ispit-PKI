@@ -6,19 +6,21 @@ import { MovieModel } from '../../models/movie.model';
 import { Router, RouterLink } from '@angular/router';
 import { NgFor, NgIf } from '@angular/common';
 import {MatIconModule} from '@angular/material/icon';
+import { SearchContainerComponent } from "../search-container/search-container.component";
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
-    MatCardModule, 
+    MatCardModule,
     MatButtonModule,
     NgFor,
     NgIf,
     MatIconModule,
-    RouterLink
-  ],
+    RouterLink,
+    SearchContainerComponent
+],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
