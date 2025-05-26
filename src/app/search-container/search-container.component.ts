@@ -57,6 +57,7 @@ export class SearchContainerComponent implements OnInit {
     })
   if(this.router.url != '/search'){
     this.router.navigate(['/search'], {relativeTo:this.route })
+    return
   }
   this.onSearch.emit()
   }
