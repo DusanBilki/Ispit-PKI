@@ -7,5 +7,5 @@ export interface UserModel{
     omiljeniFilmovi: []
     user: string
     password: string
-    rezervacije: []
+    rezervacije: string[]
 }

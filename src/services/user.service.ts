@@ -11,8 +11,8 @@ export class UserService {
   constructor() { }
 
   public static getInstance() {
-    if (this.instance == null)
-      return this.instance = new UserService
+    if (UserService.instance == null)
+      return UserService.instance = new UserService
 
     return this.instance
   }
