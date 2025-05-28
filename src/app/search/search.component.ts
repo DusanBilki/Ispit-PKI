@@ -45,12 +45,15 @@ export class SearchComponent implements OnInit {
   public movie: MovieModel | undefined = undefined
   
   
+  
   constructor() {
     this.dataService = DataService.getInstance()
     this.movieService = MovieService.getInstance()
   }
   ngOnInit(): void {
+    this.dataService.getSearchCriteria()
     this.loadTableData()
+    this.doSearch()
   }
 
   // ngOnInit(): void {

@@ -24,6 +24,7 @@ export class UserService {
         ime: 'dusan',
         prezima: 'bilkan',
         email: 'dusan@gmail.com',
+        password: '1234',
         telefon: '1234',
         adresa: 'adresa 1',
         omiljeniFilmovi: ['Godfather'],

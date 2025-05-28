@@ -8,6 +8,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
+import { SearchComponent } from '../search/search.component';
 
 @Component({
   selector: 'app-search-container',
@@ -36,6 +37,7 @@ export class SearchContainerComponent implements OnInit {
   constructor(private router: Router, private route: ActivatedRoute){
     this.dataService = DataService.getInstance()
     this.movieService = MovieService.getInstance()
+    
 
     const criteria = this.dataService.getSearchCriteria()
     this.sNaziv = criteria.nazivSearch
