@@ -34,7 +34,15 @@ export class AppComponent implements OnInit{
 
    activeUser: any = null;
 
-   
+   private userService: UserService
+
+   constructor(){
+    this.userService = UserService.getInstance()
+   }
+
+   public doLogout(){
+    this.userService.logout()
+   }
    //zasto ne moze function name(params){}
    //hocu da se prikaze login dugme samo ako !activeUser
 }

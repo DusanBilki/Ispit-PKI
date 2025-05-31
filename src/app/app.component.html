@@ -7,5 +7,8 @@
   <a routerLink="#" mat-button>About</a>
   <a routerLink="#" mat-button>Contact</a>
   <a *ngIf="!activeUser" routerLink="/login" mat-button>Login</a>
+  <a *ngIf="activeUser" routerLink="/profile" mat-button>Profile</a>
+  <!-- <a *ngIf="activeUser" routerLink="/" mat-button onclick="doLogout()" >Logout</a> -->
+   <button *ngIf="activeUser" mat-button (click)="doLogout()">Logout</button>
 </mat-toolbar>
 <router-outlet />

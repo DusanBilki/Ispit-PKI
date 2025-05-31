@@ -49,10 +49,8 @@ export class UserService {
   public login(email: string, password: string) {
     const arr = this.retrieveAllUsers()
     const usr = arr.find(user => user.email === email && user.password === password)
-
     if (usr == undefined)
       throw new Error('LOGIN_FAILED')
-
     sessionStorage.setItem('active', usr.email)
     //window.location.reload();
   }
@@ -96,8 +94,12 @@ export class UserService {
     localStorage.setItem('users', JSON.stringify(all))
   }
 
+
+
+
   public logout(){
     sessionStorage.removeItem('active')
+    window.location.href = '/';
   }
 }
 

@@ -1,1 +1,44 @@
-<p>register works!</p>
+<mat-card class="userForm" appearance="outlined">
+    <mat-card-header>
+        <h1>Registruj se</h1>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-form-field class="popuniDoKraja">
+            <mat-label>Ime</mat-label>
+            <input matInput required (change)="updateIme($event)" />
+        </mat-form-field>
+        <mat-form-field class="popuniDoKraja">
+            <mat-label>Prezime</mat-label>
+            <input matInput required (change)="updatePrezime($event)" />
+        </mat-form-field>
+        <mat-form-field class="popuniDoKraja">
+            <mat-label>Email adresa</mat-label>
+            <input matInput required (change)="updateEmail($event)" />
+        </mat-form-field>
+        <mat-form-field class="popuniDoKraja">
+            <mat-label>Broj telefona</mat-label>
+            <input matInput required (change)="updateTelefon($event)" />
+        </mat-form-field>
+        <mat-form-field class="popuniDoKraja">
+            <mat-label>Adresa stanovanja</mat-label>
+            <input matInput required (change)="updateAdresa($event)" />
+        </mat-form-field>
+        <mat-form-field class="popuniDoKraja">
+            <mat-label>izaberi sifru</mat-label>
+            <input matInput [type]="password" required (change)="updatePassword($event)" />
+        </mat-form-field>
+        <mat-form-field class="popuniDoKraja">
+            <mat-label>Potrdi sifru</mat-label>
+            <input matInput [type]="password" required (change)="updateConfirm($event)" />
+            
+        </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button type="button" (click)="doRegister()">
+            <i class="fa-solid fa-paper-plane"></i> Registruj se
+        </button>
+        <a mat-button routerLink="/login">
+            <i class="fa-solid fa-up-right-from-square"></i> Login stranica
+        </a>
+    </mat-card-actions>
+</mat-card>
