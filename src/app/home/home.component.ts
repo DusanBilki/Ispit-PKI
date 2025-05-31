@@ -29,6 +29,8 @@ export class HomeComponent implements OnInit {
   private service: MovieService
   public movies: MovieModel[] = []
 
+  activeUser: any = null
+
   constructor(private router: Router){
     this.service = MovieService.getInstance()
 
@@ -40,6 +42,17 @@ export class HomeComponent implements OnInit {
         this.movies = response
       }
     )
+    // const userActive = sessionStorage.getItem('active')
+    // if(userActive){
+    //   this.activeUser = userActive;
+    // }
+    const userInfo = localStorage.getItem('users')
+    if(userInfo){
+      const users = JSON.parse(userInfo)
+      const prviUser = users[0]
+      this.activeUser = prviUser
+
+    }
   }
 
 

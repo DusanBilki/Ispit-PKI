@@ -54,6 +54,7 @@ export class UserService {
       throw new Error('LOGIN_FAILED')
 
     sessionStorage.setItem('active', usr.email)
+    //window.location.reload();
   }
 
   public getCurrentUser() {

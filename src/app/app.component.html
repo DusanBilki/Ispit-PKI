@@ -6,5 +6,6 @@
   <a routerLink="/" mat-button>Home</a>
   <a routerLink="#" mat-button>About</a>
   <a routerLink="#" mat-button>Contact</a>
+  <a *ngIf="!activeUser" routerLink="/login" mat-button>Login</a>
 </mat-toolbar>
 <router-outlet />

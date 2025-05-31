@@ -46,6 +46,7 @@ export class LoginComponent {
     }
     try{
       this.userService.login(this.email, this.password)
+      window.location.href = '/';
       this.router.navigate(['/profile'], {relativeTo: this.route})
     }catch(e){
       alert(e)
