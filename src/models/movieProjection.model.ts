@@ -1,6 +1,6 @@
 export interface MovieProjection {
     projekcija: Date
     datum: string
-    cena: Number
+    cena: number
     status: 'rezervisano' | 'gledano' | 'otkazano'
 }

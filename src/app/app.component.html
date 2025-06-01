@@ -4,8 +4,8 @@
   <span>My Application</span>
   <span class="spacer"></span>
   <a routerLink="/" mat-button>Home</a>
-  <a routerLink="#" mat-button>About</a>
-  <a routerLink="#" mat-button>Contact</a>
+  <a routerLink="/search" mat-button>Search</a>
+  <a routerLink="/cart" mat-button>Cart</a>
   <a *ngIf="!activeUser" routerLink="/login" mat-button>Login</a>
   <a *ngIf="activeUser" routerLink="/profile" mat-button>Profile</a>
   <!-- <a *ngIf="activeUser" routerLink="/" mat-button onclick="doLogout()" >Logout</a> -->

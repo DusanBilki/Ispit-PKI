@@ -54,6 +54,14 @@ export class ReserveService {
     this.getCart().filter(movies => {movies !== movie})
   }
 
+  calculateTotalPrice(): number {
+    return this.reservations.reduce((total, reservation) =>{
+      const show = reservation.movie.projekcija.find(project =>
+        project.status === 'rezervisano'
+      )
+      return total + (show ? show.cena : 0);
+    }, 0)
+  }
 
   public clearCart(): void{
     this.reservations = []
