@@ -7,6 +7,9 @@ import { Router, RouterLink } from '@angular/router';
 import { NgFor, NgIf } from '@angular/common';
 import {MatIconModule} from '@angular/material/icon';
 import { SearchContainerComponent } from "../search-container/search-container.component";
+import { ReserveService } from '../../services/reserve.service';
+import { ReserveModel } from '../../models/reserve.model';
+import { MovieProjection } from '../../models/movieProjection.model';
 
 
 @Component({
@@ -26,6 +29,7 @@ import { SearchContainerComponent } from "../search-container/search-container.c
 })
 export class HomeComponent implements OnInit {
   
+  private reserveService: ReserveService
   private service: MovieService
   public movies: MovieModel[] = []
 
@@ -33,7 +37,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private router: Router){
     this.service = MovieService.getInstance()
-
+    this.reserveService = ReserveService.getInstance()
   }
 
   ngOnInit(): void {
@@ -53,6 +57,13 @@ export class HomeComponent implements OnInit {
       this.activeUser = prviUser
 
     }
+  }
+  public reserve(movie: MovieModel, projection: MovieProjection){
+    const active = sessionStorage.getItem('active')
+    if(!active) this.router.navigate(['/login'])
+
+    this.reserveService.reserveTicket(movie, projection)
+    this.router.navigate(['/cart'])
   }
 
 

@@ -5,6 +5,7 @@ import { ReserveModel } from '../../models/reserve.model';
 import { MatButtonModule } from '@angular/material/button';
 import { NgFor, NgIf } from '@angular/common';
 import { UserService } from '../../services/user.service';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-cart',
@@ -13,7 +14,8 @@ import { UserService } from '../../services/user.service';
     MatTableModule,
     MatButtonModule,
     NgIf,
-    NgFor
+    NgFor,
+    MatCardModule
   ],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css'
@@ -36,8 +38,6 @@ export class CartComponent implements OnInit {
     this.checkLogin()
   }
 
-  public userActive: any = undefined
-
   checkLogin(): void {
     const userIs = sessionStorage.getItem('active')
     if(!userIs){
@@ -46,9 +46,6 @@ export class CartComponent implements OnInit {
 
   }
   
-
-  
-
   getCart(): ReserveModel[]{
     return this.reservetaionService.getCart()
   }
@@ -57,7 +54,7 @@ export class CartComponent implements OnInit {
     const reservedProjection = reserved.movie.projekcija.filter(movie =>{
       movie.status === 'rezervisano'
     })
-
+    console.log(reservedProjection)
     return reservedProjection.length > 0 ? reservedProjection[0].cena : 0
   }
 
@@ -71,7 +68,7 @@ export class CartComponent implements OnInit {
   } 
 
   buy(){
-    const cartMovies = this.reservetaionService.getCart()
+    const cartMovies = this.getCart()
     let gledaniFilmovi = JSON.parse(localStorage.getItem('odgledani') || '[]')
 
     cartMovies.forEach(reservation => {

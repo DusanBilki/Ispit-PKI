@@ -16,7 +16,7 @@
     </mat-card-content>
     <mat-card-actions>
       <button mat-button [routerLink]="['/movie/', movie.id] ">INFO</button>
-      <button mat-button>REZERVISI</button>
+      <button mat-button (click)="reserve(movie, movie.projekcija[0])">REZERVISI</button>
     </mat-card-actions>
   </mat-card>
 

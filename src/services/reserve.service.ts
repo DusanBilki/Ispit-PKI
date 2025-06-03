@@ -51,7 +51,7 @@ export class ReserveService {
   }
 
   public removeFromCart(movie: ReserveModel){
-    this.getCart().filter(movies => {movies !== movie})
+   this.reservations = this.reservations.filter(movies => {movies !== movie})
   }
 
   calculateTotalPrice(): number {
