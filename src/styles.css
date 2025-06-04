@@ -16,7 +16,7 @@ mat-card-title{
     object-fit: contain;
 
 }
-.movie {
+.movie, h1, h2, h3 {
     color: white;
   }
 

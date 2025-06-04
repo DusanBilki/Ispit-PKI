@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { NgFor, NgIf } from '@angular/common';
 import { UserService } from '../../services/user.service';
 import { MatCardModule } from '@angular/material/card';
+import { UserModel } from '../../models/user.model';
 
 @Component({
   selector: 'app-cart',
@@ -24,18 +25,21 @@ export class CartComponent implements OnInit {
 
   private reservetaionService: ReserveService
   private userService: UserService
-
+  private user: UserModel | undefined
 
   displayedColumns: string[] = ['naziv', 'cena','akcija']
-  dataSource: MatTableDataSource<ReserveModel>
+  dataSource: MatTableDataSource<ReserveModel> = new MatTableDataSource();
 
   constructor(){
     this.reservetaionService = ReserveService.getInstance()
-    this.dataSource = new MatTableDataSource(this.getCart())
     this.userService = UserService.getInstance()
   }
   ngOnInit(): void {
     this.checkLogin()
+    const rezervisano = this.reservetaionService.getCart()
+    this.dataSource.data = rezervisano
+    this.user = this.userService.getCurrentUser()
+    console.log(this.user?.rezervacije)
   }
 
   checkLogin(): void {
@@ -51,11 +55,11 @@ export class CartComponent implements OnInit {
   }
 
   getTicketPrice(reserved: ReserveModel): number{
-    const reservedProjection = reserved.movie.projekcija.filter(movie =>{
-      movie.status === 'rezervisano'
-    })
-    console.log(reservedProjection)
-    return reservedProjection.length > 0 ? reservedProjection[0].cena : 0
+    const reservedProjection = reserved.movie.projekcija.filter(projection =>
+      projection.status === 'rezervisano'
+    )
+    //console.log(reservedProjection)
+    return reservedProjection[0].cena
   }
 
   getTotalPrice(): number{

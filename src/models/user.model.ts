@@ -4,7 +4,7 @@ export interface UserModel{
     email: string
     telefon: string
     adresa: string
-    omiljeniFilmovi: []
+    omiljeniFilmovi: string[]
     user: string
     password: string
     rezervacije: string[]

@@ -21,14 +21,14 @@ export class UserService {
     let json = localStorage.getItem('users')
     if (json == null) {
       const defaultUser = {
-        ime: 'dusan',
-        prezima: 'bilkan',
+        ime: 'Dusan',
+        prezima: 'Bilkan',
         email: 'dusan@gmail.com',
         password: '1234',
         telefon: '1234',
         adresa: 'adresa 1',
         omiljeniFilmovi: ['Godfather'],
-        rezervisaniFilmovi: ['Hair', 'Godfather']
+        rezervacije: ['Hair', 'Godfather']
       }
       localStorage.setItem('users', JSON.stringify([defaultUser]))
       json = localStorage.getItem('users')
@@ -65,6 +65,9 @@ export class UserService {
     if (usr == undefined)
       throw new Error('NO_ACTIVE_USER')
 
+    if(!usr.rezervacije){
+      usr.rezervacije = []
+    }
     return usr
   }
 
@@ -99,9 +102,14 @@ export class UserService {
 
   public logout(){
     sessionStorage.removeItem('active')
+    localStorage.clear()
     window.location.href = '/';
   }
+
+
+
 }
+
 
 
 // ime: string

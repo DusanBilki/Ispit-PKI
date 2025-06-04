@@ -3,6 +3,7 @@ import { UserService } from './user.service';
 import { ReserveModel } from '../models/reserve.model';
 import { MovieModel } from '../models/movie.model';
 import { MovieProjection } from '../models/movieProjection.model';
+import { UserModel } from '../models/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -20,15 +21,18 @@ export class ReserveService {
   constructor() { 
     this.userService = UserService.getInstance()
   }
-
+  public user: UserModel | undefined
   private reservations: ReserveModel[] = []
 
 
   public addToCart(movie: ReserveModel){
     this.reservations.push(movie)
+    localStorage.setItem('rezervacije', JSON.stringify(this.reservations))
   }
 
   public getCart(): ReserveModel[]{
+    const podaci = localStorage.getItem('rezervacije')
+    this.reservations = podaci ? JSON.parse(podaci) : [];
     return this.reservations
   }
 
@@ -51,7 +55,8 @@ export class ReserveService {
   }
 
   public removeFromCart(movie: ReserveModel){
-   this.reservations = this.reservations.filter(movies => {movies !== movie})
+   this.reservations = this.reservations.filter(movies => movies !== movie)
+   localStorage.setItem('rezervacije', JSON.stringify(this.reservations))
   }
 
   calculateTotalPrice(): number {
@@ -65,5 +70,6 @@ export class ReserveService {
 
   public clearCart(): void{
     this.reservations = []
+    localStorage.removeItem('rezervacije')
   }
 }
