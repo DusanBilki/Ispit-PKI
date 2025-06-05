@@ -1,11 +1,12 @@
 .example-card {
-    max-width: 700px;
+    width: 45%;
+    min-width: 300px;
     
   }
 
   .komentar {
     
-    max-width: 700px;
+    width: 45%;
   }
   .test {
     display: flex;
