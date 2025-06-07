@@ -39,7 +39,6 @@ export class CartComponent implements OnInit {
     const rezervisano = this.reservetaionService.getCart()
     this.dataSource.data = rezervisano
     this.user = this.userService.getCurrentUser()
-    console.log(this.user?.rezervacije)
   }
 
   checkLogin(): void {
@@ -71,19 +70,18 @@ export class CartComponent implements OnInit {
     this.dataSource.data = this.getCart()
   } 
 
-  buy(){
+  buyFromCart(){
     const cartMovies = this.getCart()
-    let gledaniFilmovi = JSON.parse(localStorage.getItem('odgledani') || '[]')
-
+    let kupljeni: string[] = []
     cartMovies.forEach(reservation => {
       reservation.movie.projekcija.forEach(movie =>{
         if(movie.status === 'rezervisano'){
           movie.status = 'gledano'
-          gledaniFilmovi.push(movie)
+          kupljeni.push(reservation.movie.naziv)
         }
       })
     })
-    localStorage.setItem('odgledani', gledaniFilmovi )
+    localStorage.setItem('gledano', JSON.stringify(kupljeni))
     this.reservetaionService.clearCart()
     this.dataSource.data = this.getCart()
   }

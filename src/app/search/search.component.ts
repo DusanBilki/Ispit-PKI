@@ -78,10 +78,10 @@ export class SearchComponent implements OnInit {
     const filteredMovies = this.movies.filter(movie =>{
       const matchesName = selectedMovieName ? movie.naziv === selectedMovieName : false
       const matchesGenre = selectedMovieGenre ? movie.zanr === selectedMovieGenre : false
-      const matchesPrice = selectedMoviePrice ? movie.projekcija.some(p => p.cena == selectedMoviePrice) : false
+      const matchesPrice = selectedMoviePrice ? movie.projekcija.find(p => p.cena == selectedMoviePrice) : false
 
-      if(!selectedMovieName && !selectedMovieGenre && !selectedMoviePrice)
-        return true
+      // if(!selectedMovieName && !selectedMovieGenre && !selectedMoviePrice)
+      //   return false
 
       return matchesName || matchesGenre || matchesPrice
     });

@@ -7,12 +7,16 @@
         </mat-card-header>
         <img mat-card-image src={{movie.slika}} alt={{movie.naziv}} class="moviePhoto">
         <mat-card-content>
+          <mat-list-item role="listitem">Trajanje: {{movie.trajanje}}</mat-list-item>
+                        <mat-list-item role="listitem">Datum izdavanja: {{movie.datumIzlaska}}</mat-list-item>
+                        <mat-list-item role="listitem">Reziser: {{movie.reziser}}</mat-list-item>
+                        <mat-list-item role="listitem">Glumci: {{movie.glumci}}</mat-list-item>
           <p>
             {{movie.opis}}
           </p>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-button>REZERVISI</button>
+          <button mat-button (click)="reserve(movie, movie.projekcija[0])">REZERVISI</button>
         </mat-card-actions>
       </mat-card>
 
@@ -25,5 +29,34 @@
               
             </mat-list-item>
         </mat-list>
+        <h3 *ngIf="!active">Prijavite se da biste ostavili komentar</h3>
     </mat-card>
+<div>
+    
+  </div>
+
+  <mat-card appearance="outlined" *ngIf="active">
+    <mat-card-header>
+      <mat-card-subtitle>Dodaj Komentar</mat-card-subtitle>
+    </mat-card-header>
+    <form class="example-form" >
+      <mat-form-field class="example-full-width">
+        <mat-label>Comment as {{active}}</mat-label>
+        <textarea matInput [(ngModel)]="komentar" name="komentar" placeholder="Ex. It makes me feel..."></textarea>
+      </mat-form-field>
+    </form>
+    <mat-form-field>
+      <mat-label>Ocena</mat-label>
+      <mat-select [(ngModel)]="ocena"  disableRipple>
+        <mat-option [value]="1">1</mat-option>
+        <mat-option [value]="2">2</mat-option>
+        <mat-option [value]="3">3</mat-option>
+        <mat-option [value]="4">4</mat-option>
+        <mat-option [value]="5">5</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-button="outlined" (click)="addComent()">Dodaj Komentar</button>
+  </mat-card>
 </div>
+
+

@@ -39,7 +39,7 @@ export class ReserveService {
 
   public reserveTicket(movie:MovieModel, projection: MovieProjection){
     projection.status = 'rezervisano'
-    const booked = {
+    const reservation = {
       movie: movie
     }
     const currentUser = this.userService.getCurrentUser()
@@ -49,7 +49,7 @@ export class ReserveService {
       this.userService.updateUser(currentUser)
     }
 
-    this.addToCart(booked)
+    this.addToCart(reservation)
     alert(`Rezervisan ${movie.naziv}`)
 
   }

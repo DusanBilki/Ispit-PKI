@@ -22,7 +22,7 @@ export class UserService {
     if (json == null) {
       const defaultUser = {
         ime: 'Dusan',
-        prezima: 'Bilkan',
+        prezime: 'Bilkan',
         email: 'dusan@gmail.com',
         password: '1234',
         telefon: '1234',
@@ -101,8 +101,10 @@ export class UserService {
 
 
   public logout(){
-    sessionStorage.removeItem('active')
-    localStorage.clear()
+    sessionStorage.clear()
+    localStorage.removeItem('gledano')
+    localStorage.removeItem('rezervacije')
+    
     window.location.href = '/';
   }
 

@@ -54,16 +54,20 @@ export class HomeComponent implements OnInit {
     if(userInfo){
       const users = JSON.parse(userInfo)
       const prviUser = users[0]
-      this.activeUser = prviUser
+      this.activeUser = userInfo
 
     }
   }
   public reserve(movie: MovieModel, projection: MovieProjection){
-    const active = sessionStorage.getItem('active')
-    if(!active) this.router.navigate(['/login'])
-
-    this.reserveService.reserveTicket(movie, projection)
-    this.router.navigate(['/cart'])
+    // const active = sessionStorage.getItem('active')
+    // if(!active) this.router.navigate(['/login'])
+    if(!sessionStorage.getItem('active')) {
+      this.router.navigate(['/login'])
+    } else {
+      this.reserveService.reserveTicket(movie, projection)
+      this.router.navigate(['/cart'])
+    }
+    
   }
 
 

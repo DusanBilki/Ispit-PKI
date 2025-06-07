@@ -1,11 +1,7 @@
-.example-card {
-    width: 45%;
-    min-width: 300px;
-    
-  }
+
 
   .komentar {
-    
+    display: flex;
     width: 45%;
   }
   .test {
@@ -16,4 +12,13 @@
     justify-content: center;     /* Centriraj ih u sredinu */
     flex-wrap: wrap;             /* Ako fali prostora, neka pređu u novi red */
     padding: 20px;
+  }
+
+  mat-card {
+    width: 45%;
+    flex-direction: column;
+  }
+
+  .example-full-width {
+    width: 100%;
   }

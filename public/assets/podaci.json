@@ -31,6 +31,29 @@
             {"datum": "2025-05-12T21:00:00Z", "cena": 1000, "status":""}
         ],
         "recenzije":[
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Odlican film, sva 3 dela preporucujem"},
+            {"user": "Korisnik 1", "ocena":4, "komentar": "Dobar, ali predugo traje za moj ukus"},
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Sve preporuke, odgledala vise puta sve"},
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Vito Corleone najbolji"},
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Marlon Brando !"},
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kakav glumac Al Pacino"}
+        ],
+        "slika": "/assets/img/godfather.jpg"
+    },
+
+    {
+        "id": 3,
+        "naziv": "Transformers",
+        "opis": "An ancient struggle between two Cybertronian races, the heroic Autobots and the evil Decepticons, comes to Earth, with a clue to the ultimate power held by a teenager.",
+        "zanr": "Action",
+        "trajanje": 144,
+        "reziser": "Michael Bay",
+        "glumci": ["Shia LaBeouf, Megan Fox, Josh Duhamel"],
+        "datumIzlaska": 2007,
+        "projekcija": [
+            {"datum": "2025-05-12T21:00:00Z", "cena": 1000, "status":""}
+        ],
+        "recenzije":[
             {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"},
             {"user": "Korisnik 1", "ocena":4, "komentar": "Kidalica ali dugacak"},
             {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"},
@@ -38,6 +61,165 @@
             {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"},
             {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"}
         ],
-        "slika": "/assets/img/godfather.jpg"
+        "slika": "/assets/img/transformers.jpg"
+    },
+
+    {
+        "id": 4,
+        "naziv": "The Dark Knight",
+        "opis": "When a menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman, James Gordon and Harvey Dent must work together to put an end to the madness.",
+        "zanr": "Action",
+        "trajanje": 152,
+        "reziser": "Cristopher Nolan",
+        "glumci": ["Christian Bale, Heath Ledger, Aaron Neckhart"],
+        "datumIzlaska": 2008,
+        "projekcija": [
+            {"datum": "2025-05-12T21:00:00Z", "cena": 1000, "status":""}
+        ],
+        "recenzije":[
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"},
+            {"user": "Korisnik 1", "ocena":4, "komentar": "Kidalica ali dugacak"},
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"},
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"},
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"},
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"}
+        ],
+        "slika": "/assets/img/darkknight.jpg"
+    },
+
+    {
+        "id": 5,
+        "naziv": "Leon The Professional",
+        "opis": "An Italian hit man protects a New York orphan.",
+        "zanr": "Thriller/Drama",
+        "trajanje": 110,
+        "reziser": "Luc Besson",
+        "glumci": ["Jean Reno, Gary Oldman, Natalie Portman"],
+        "datumIzlaska": 1994,
+        "projekcija": [
+            {"datum": "2025-05-12T21:00:00Z", "cena": 1000, "status":""}
+        ],
+        "recenzije":[
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"},
+            {"user": "Korisnik 1", "ocena":4, "komentar": "Kidalica ali dugacak"},
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"},
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"},
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"},
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"}
+        ],
+        "slika": "/assets/img/professional.jpg"
+    },
+
+    {
+        "id": 6,
+        "naziv": "Gladiator",
+        "opis": "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.",
+        "zanr": "Action",
+        "trajanje": 155,
+        "reziser": "Ridley Scott",
+        "glumci": ["Russell Crowe, Joaquin Phoenix, Connie Nielsen"],
+        "datumIzlaska": 2000,
+        "projekcija": [
+            {"datum": "2025-05-12T21:00:00Z", "cena": 1000, "status":""}
+        ],
+        "recenzije":[
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"},
+            {"user": "Korisnik 1", "ocena":4, "komentar": "Kidalica ali dugacak"},
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"},
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"},
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"},
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"}
+        ],
+        "slika": "/assets/img/gladiator.jpg"
+    },
+    
+    {
+        "id": 7,
+        "naziv": "Alien",
+        "opis": "After investigating a mysterious transmission of unknown origin, the crew of a commercial spacecraft encounters a deadly lifeform.",
+        "zanr": "Horror",
+        "trajanje": 117,
+        "reziser": "Ridley Scott",
+        "glumci": ["Sigourney Weaver, Tom Skerritt, John Hurt"],
+        "datumIzlaska": 1979,
+        "projekcija": [
+            {"datum": "2025-05-12T21:00:00Z", "cena": 1000, "status":""}
+        ],
+        "recenzije":[
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"},
+            {"user": "Korisnik 1", "ocena":4, "komentar": "Kidalica ali dugacak"},
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"},
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"},
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"},
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"}
+        ],
+        "slika": "/assets/img/alien.jpg"
+    },
+
+    {
+        "id": 8,
+        "naziv": "The Shining",
+        "opis": "A family heads to an isolated hotel for the winter, where a sinister presence influences the father into violence. At the same time, his psychic son sees horrifying forebodings from both the past and the future.",
+        "zanr": "Horror",
+        "trajanje": 146,
+        "reziser": "Stanley Kubrick",
+        "glumci": ["Jack Nicholson, Shelley Duvall, Danny Lloyd"],
+        "datumIzlaska": 1980,
+        "projekcija": [
+            {"datum": "2025-05-12T21:00:00Z", "cena": 1000, "status":""}
+        ],
+        "recenzije":[
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"},
+            {"user": "Korisnik 1", "ocena":4, "komentar": "Kidalica ali dugacak"},
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"},
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"},
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"},
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"}
+        ],
+        "slika": "/assets/img/shining.jpg"
+    },
+    {
+        "id": 9,
+        "naziv": "Forest Gump",
+        "opis": "The history of the United States from the 1950s to the '70s unfolds from the perspective of an Alabama man with an IQ of 75, who yearns to be reunited with his childhood sweetheart.",
+        "zanr": "Thriller/Drama",
+        "trajanje": 142,
+        "reziser": "Robert Zemeckis",
+        "glumci": ["Tom Hanks, Robin Wright, Gary Sinise"],
+        "datumIzlaska": 1994,
+        "projekcija": [
+            {"datum": "2025-05-12T21:00:00Z", "cena": 1000, "status":""}
+        ],
+        "recenzije":[
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"},
+            {"user": "Korisnik 1", "ocena":4, "komentar": "Kidalica ali dugacak"},
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"},
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"},
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"},
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"}
+        ],
+        "slika": "/assets/img/forest.jpg"
+    },
+    {
+        "id": 10,
+        "naziv": "The Good, the Bad and the Ugly",
+        "opis": "A bounty-hunting scam joins two men in an uneasy alliance against a third in a race to find a fortune in gold buried in a remote cemetery.",
+        "zanr": "Thriller/Drama",
+        "trajanje": 178,
+        "reziser": "Sergio Leone",
+        "glumci": ["Clint Eastwood, Eli Wallach, Lee Van Cleef"],
+        "datumIzlaska": 1966,
+        "projekcija": [
+            {"datum": "2025-05-12T21:00:00Z", "cena": 1000, "status":""}
+        ],
+        "recenzije":[
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"},
+            {"user": "Korisnik 1", "ocena":4, "komentar": "Kidalica ali dugacak"},
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"},
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"},
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"},
+            {"user": "Korisnik 2", "ocena": 5, "komentar": "Kum goated film"}
+        ],
+        "slika": "/assets/img/thegood.jpg"
     }
 ]

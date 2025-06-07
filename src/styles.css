@@ -20,13 +20,7 @@ mat-card-title{
     color: white;
   }
 
-  .containers {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .example-card {
+.example-card {
     max-width: 400px;
 }
 

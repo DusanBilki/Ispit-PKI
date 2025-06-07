@@ -18,7 +18,7 @@ export class DataService {
 
   public getZanr(): string[]{
     return [
-      'Action', 'Thriller/Drama', 'War'
+      'Action', 'Thriller/Drama', 'War', 'Horror'
     ]
   }
 
