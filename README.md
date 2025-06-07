@@ -7,4 +7,3 @@ Ovaj repozitorijum je kreiran kao izvorni kod aplikacije iz predmeta Programiran
 Aplikacija koristi frontend okruženje Angular 18 sa sledećim bibliotekama:
 
 - [Angular Material](#)
-- [Sweet Alert 2](#)
